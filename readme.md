@@ -13,3 +13,15 @@
 3. enable annotation processing 체크
 4. Apply 선택
 5. OK 선택
+
+### 사용되는 라이브러리
+
+1. spring-web
+1. thymeleaf
+1. lombok
+1. h2
+1. jpa
+1. devtools (html화면에서 build-> recompile하면 서버 재시작안하고 파일만 recompile한다.)
+```
+implementation 'org.springframework.boot:spring-boot-devtools'
+```
