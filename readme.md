@@ -25,3 +25,31 @@
 ```
 implementation 'org.springframework.boot:spring-boot-devtools'
 ```
+
+
+### Live Template
+
+edit창에 ttd 입력으로 템플릿 뜰 수 있도록 만들기
+
+1. preference 열기
+1. live template 검색
+1. add 버튼 클릭
+1. group template 선택
+1. "custom" 입력
+1. OK 클릭
+1. add 버튼 클릭
+1. live template 선택
+1. "ttd" 입력
+1. 아래 내용 입력
+```java
+@Test
+public void $Name$() throws Exception {
+ // Given
+ $End$
+ // When
+
+ // Then
+}
+
+```
+11. OK 버튼 클릭

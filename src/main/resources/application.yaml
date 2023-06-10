@@ -1,0 +1,20 @@
+spring:
+  datasource:
+    url: jdbc:h2:tcp://localhost/~/Project/PracticeJava/spring-jpa-first-with-yhkim/jpashop
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+
+  jpa:
+    hibernate:
+#      show_sql: true  # 시스템이 실행되는 SQL을 찍어준다. 비효율적이고 느리다.
+      ddl-auto: create
+    properties:
+      hibernate:
+        format_sql: true
+
+
+logging:
+  level:
+    org.hibernate.SQL: debug # 로거가 실행되는 SQL을 찍어준다. 효율적이고 빠르다.
+    org.hibernate.type: trace # 로거가 실행되는 SQL의 파라미터중 ?로 찍히는 부분의 실제 값을 추가로 찍어준다.
