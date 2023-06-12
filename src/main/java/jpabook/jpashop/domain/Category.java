@@ -8,6 +8,8 @@ import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
+import static javax.persistence.FetchType.LAZY;
+
 @Entity
 @Getter @Setter
 public class Category {
@@ -26,13 +28,17 @@ public class Category {
   private List<Item> items = new ArrayList<>();
 
   // 셀프 조인을 위한것 parent와 child 생성
-  @ManyToOne
+  @ManyToOne(fetch = LAZY) // ManyToOne은 기본 fetchType이 Eager이기때문에 Lazy로 바꿔줘야한다.
   @JoinColumn(name = "parent_id")
   private Category parent;
 
   @OneToMany(mappedBy = "parent")
   private List<Category> child = new ArrayList<>();
 
-
+  //==연관관계 메서드==//
+  public void addChildCategory(Category child) {
+    this.child.add(child);
+    child.setParent(this);
+  }
 
 }
