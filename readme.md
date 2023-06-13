@@ -53,3 +53,12 @@ public void $Name$() throws Exception {
 
 ```
 11. OK 버튼 클릭
+
+### Build 세팅
+이것을 해야 build가 빨라지고 test에서 intellij에 testName이 표시된다.
+
+1. preference
+1. gradle 검색
+1. build and running using: intellij idea 선택
+1. run tests using: intellij idea 선택
+1. OK 선택

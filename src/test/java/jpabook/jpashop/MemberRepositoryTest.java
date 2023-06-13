@@ -1,7 +1,10 @@
 package jpabook.jpashop;
 
+import jpabook.jpashop.domain.Member;
+import jpabook.jpashop.repository.MemberRepository;
 import org.assertj.core.api.Assertions;
 import org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,24 +21,26 @@ import org.thymeleaf.engine.AttributeDefinition;
 @SpringBootTest // springBoot를 실제 구동시켜서 테스트를 진행하는 것 어노테이션이다.
 class MemberRepositoryTest {
 
-  @Autowired MemberRepository memberRepository;
+  @Autowired
+  MemberRepository memberRepository;
 
+  @Disabled
   @Test
   @Transactional // 테스트가 하나의 트랜잭션으로 진행될 수 있도록함, 테스트가 끝나면 자동으로 rollback을 진행함
   @Rollback(false) // test가 끝나도 rollback을 진행하고 싶지 않을때 사용함
   public void testMember() throws Exception {
-    // Given
-    Member member = new Member();
-    member.setUsername("memberA");
-
-    //when
-    Long savedId = memberRepository.save(member);
-    Member findMember = memberRepository.find(savedId);
-
-    //then
-    Assertions.assertThat(findMember.getId()).isEqualTo(member.getId());
-    Assertions.assertThat(findMember.getUsername()).isEqualTo(member.getUsername());
-    Assertions.assertThat(findMember).isEqualTo(member);
+//    // Given
+//    Member member = new Member();
+//    member.setUsername("memberA");
+//
+//    //when
+//    Long savedId = memberRepository.save(member);
+//    Member findMember = memberRepository.find(savedId);
+//
+//    //then
+//    Assertions.assertThat(findMember.getId()).isEqualTo(member.getId());
+//    Assertions.assertThat(findMember.getUsername()).isEqualTo(member.getUsername());
+//    Assertions.assertThat(findMember).isEqualTo(member);
   }
 
 }

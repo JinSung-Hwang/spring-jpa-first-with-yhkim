@@ -27,4 +27,5 @@ public class Member {
   // 여기에 값을 어떻게 넣는다고 연관 관계가 바뀌지 않는다.
   // 단, order class에서 member값을 바꾸면 연관 관계가 바뀐다.
   private List<Order> orders = new ArrayList<>();
+
 }

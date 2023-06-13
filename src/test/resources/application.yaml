@@ -1,0 +1,21 @@
+spring:
+# 기본적으로 아래 세팅이(4번 라인)이 없어도 기본적으로 JVM을 통해 메모리 모드로 동작한다.
+  datasource:
+    url: jdbc:h2:mem:test # JVM을 통해 메모리 모드로 동작하도록 테스트 환경을 만듬
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+
+  jpa:
+    hibernate:
+#      show_sql: true  # 시스템이 실행되는 SQL을 찍어준다. 비효율적이고 느리다.
+      ddl-auto: create-drop # 테스트 케이스는 create-drop으로 동작한다. create-drop은 테스트 종료하면 drop table까지 날려준다.
+    properties:
+      hibernate:
+        format_sql: true
+
+
+logging:
+  level:
+    org.hibernate.SQL: debug # 로거가 실행되는 SQL을 찍어준다. 효율적이고 빠르다.
+    org.hibernate.type: trace # 로거가 실행되는 SQL의 파라미터중 ?로 찍히는 부분의 실제 값을 추가로 찍어준다.
