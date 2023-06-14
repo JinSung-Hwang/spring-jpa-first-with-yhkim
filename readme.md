@@ -27,7 +27,7 @@ implementation 'org.springframework.boot:spring-boot-devtools'
 ```
 
 
-### Live Template
+### Live Template 세팅
 
 edit창에 ttd 입력으로 템플릿 뜰 수 있도록 만들기
 
