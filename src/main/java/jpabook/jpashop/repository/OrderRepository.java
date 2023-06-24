@@ -33,21 +33,21 @@ public class OrderRepository {
     // 주문 상태 검색
     if (orderSearch.getOrderStatus() != null) {
       if(isFirstCondition) {
-        jpql += "where";
+        jpql += " where ";
         isFirstCondition = false;
       } else {
-        jpql += "and";
+        jpql += " and ";
       }
-      jpql += "o.status = : status";
+      jpql += " o.status = : status";
     }
 
     // 회원 이름 검색
     if (StringUtils.hasText(orderSearch.getMemberName())) {
       if (isFirstCondition) {
-        jpql += "where";
+        jpql += " where ";
         isFirstCondition = false;
       } else {
-        jpql += "and";
+        jpql += " and ";
       }
       jpql += " m.name like :name";
     }
