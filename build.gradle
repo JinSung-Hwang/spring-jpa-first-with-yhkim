@@ -22,6 +22,8 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.boot:spring-boot-starter-validation'
+
 	implementation 'org.springframework.boot:spring-boot-devtools' // 여기에 버전이 없는 이유는 springboot가 이미 설치할떄 궁합이 맞는 라이브러리 버전을 모두 세팅하기때문에 버전정도가 없는 것이다.
 
 	implementation "com.github.gavlyukovskiy:p6spy-spring-boot-starter:1.5.6" // db connection 라이브러리를 wrapping해두고 logging을 찍어주는 라이브러리
