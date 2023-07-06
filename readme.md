@@ -63,7 +63,9 @@ public void $Name$() throws Exception {
 }
 
 ```
-11. OK 버튼 클릭
+11. 하단 부분에 change 클릭(어떤 확장자에서 live templates이 표시될것인지 설정해야함)
+12. java 클릭
+13. OK 버튼 클릭
 
 
 ### 사용되는 라이브러리
