@@ -53,13 +53,14 @@ edit창에 ttd 입력으로 템플릿 뜰 수 있도록 만들기
 1. "ttd" 입력
 1. 아래 내용 입력
 ```java
-@Test
-public void $Name$() throws Exception {
- // Given
- $End$
- // When
+@org.junit.jupiter.api.DisplayName("$displayName$")
+@org.junit.jupiter.api.Test
+void $methodName$() {
+  // Given
+  $end$
+  // When
 
- // Then
+  // Then
 }
 
 ```
